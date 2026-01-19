@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "esBisiesto/1.0.0": {
+        "runtime": {
+          "esBisiesto.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "esBisiesto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

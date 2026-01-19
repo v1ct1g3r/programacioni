@@ -1,0 +1,14 @@
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\esBisiesto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\esBisiesto.AssemblyInfoInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\esBisiesto.AssemblyInfo.cs
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\esBisiesto.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\bin\Debug\net10.0\esBisiesto.exe
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\bin\Debug\net10.0\esBisiesto.deps.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\bin\Debug\net10.0\esBisiesto.runtimeconfig.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\bin\Debug\net10.0\esBisiesto.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\bin\Debug\net10.0\esBisiesto.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\esBisiesto.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\refint\esBisiesto.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\esBisiesto.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\esBisiesto.genruntimeconfig.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\esBisiesto\obj\Debug\net10.0\ref\esBisiesto.dll
