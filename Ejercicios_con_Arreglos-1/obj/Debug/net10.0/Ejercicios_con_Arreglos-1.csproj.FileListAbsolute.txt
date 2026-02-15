@@ -1,0 +1,15 @@
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.AssemblyInfoInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.AssemblyInfo.cs
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.sourcelink.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\bin\Debug\net10.0\Ejercicios_con_Arreglos-1.exe
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\bin\Debug\net10.0\Ejercicios_con_Arreglos-1.deps.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\bin\Debug\net10.0\Ejercicios_con_Arreglos-1.runtimeconfig.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\bin\Debug\net10.0\Ejercicios_con_Arreglos-1.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\bin\Debug\net10.0\Ejercicios_con_Arreglos-1.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\refint\Ejercicios_con_Arreglos-1.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\Ejercicios_con_Arreglos-1.genruntimeconfig.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Ejercicios_con_Arreglos-1\obj\Debug\net10.0\ref\Ejercicios_con_Arreglos-1.dll
