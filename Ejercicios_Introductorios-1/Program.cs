@@ -85,7 +85,7 @@ class Program
         n = c;
         if (n > mayor)
             mayor = n;
-        Console.WriteLine($"El mayor entre {a}, {b}, y {c} es {mayor}");
+        Console.WriteLine($"El mayor entre {a}, {b} y {c} es {mayor}");
     }
     static void Ejercicio8(int n)
     {
@@ -114,5 +114,54 @@ class Program
         Console.WriteLine();
     }
     static void Main()
-    {}
+    {
+        Console.WriteLine("=== Ejercicio 1 ===");
+        Ejercicio1(34);   // 3 + 4
+        Ejercicio1(90);   // 9 + 0
+
+        Console.WriteLine("\n=== Ejercicio 2 ===");
+        Ejercicio2(13);   // primo del arreglo
+        Ejercicio2(20);   // no primo del arreglo
+        Ejercicio2(-5);   // negativo
+
+        Console.WriteLine("\n=== Ejercicio 3 ===");
+        Ejercicio3(23);   // ambos dígitos primos
+        Ejercicio3(29);   // solo primero primo
+        Ejercicio3(14);   // ninguno primo
+
+        Console.WriteLine("\n=== Ejercicio 4 ===");
+        Ejercicio4(4, 6);   // suma par
+        Ejercicio4(3, 5);   // suma par
+        Ejercicio4(3, 4);   // suma impar
+
+        Console.WriteLine("\n=== Ejercicio 5 ===");
+        Ejercicio5(352);   // mayor en posición 1
+        Ejercicio5(789);   // mayor en posición 0
+        Ejercicio5(123);   // mayor en posición 2
+
+        Console.WriteLine("\n=== Ejercicio 6 ===");
+        Ejercicio6(842);   // 8 múltiplo de 4 y 2
+        Ejercicio6(246);   // ninguno múltiplo de ambos
+        Ejercicio6(963);   // 9 múltiplo de 3 y 3
+
+        Console.WriteLine("\n=== Ejercicio 7 ===");
+        Ejercicio7(3, 7, 5);
+        Ejercicio7(10, 2, 8);
+        Ejercicio7(-1, -5, -3);
+
+        Console.WriteLine("\n=== Ejercicio 8 ===");
+        Ejercicio8(12321);  // capicúa
+        Ejercicio8(54345);  // capicúa
+        Ejercicio8(12345);  // no capicúa
+
+        Console.WriteLine("\n=== Ejercicio 9 ===");
+        Ejercicio9(1221);  // segundo = penúltimo
+        Ejercicio9(4554);  // segundo = penúltimo
+        Ejercicio9(1245);  // no iguales
+
+        Console.WriteLine("\n=== Ejercicio 10 ===");
+        Ejercicio10(5, 12);   // diferencia <= 10
+        Ejercicio10(20, 5);   // diferencia > 10
+        Ejercicio10(7, 7);    // iguales
+    }
 }
