@@ -1,0 +1,15 @@
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\bin\Debug\net10.0\Practica_polimorfismo-2.exe
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\bin\Debug\net10.0\Practica_polimorfismo-2.deps.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\bin\Debug\net10.0\Practica_polimorfismo-2.runtimeconfig.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\bin\Debug\net10.0\Practica_polimorfismo-2.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\bin\Debug\net10.0\Practica_polimorfismo-2.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.AssemblyInfoInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.AssemblyInfo.cs
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.sourcelink.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\refint\Practica_polimorfismo-2.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\Practica_polimorfismo-2.genruntimeconfig.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Practica_polimorfismo-2\obj\Debug\net10.0\ref\Practica_polimorfismo-2.dll
