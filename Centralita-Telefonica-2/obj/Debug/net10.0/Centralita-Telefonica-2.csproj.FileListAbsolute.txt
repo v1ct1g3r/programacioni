@@ -1,0 +1,15 @@
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\bin\Debug\net10.0\Centralita-Telefonica-2.exe
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\bin\Debug\net10.0\Centralita-Telefonica-2.deps.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\bin\Debug\net10.0\Centralita-Telefonica-2.runtimeconfig.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\bin\Debug\net10.0\Centralita-Telefonica-2.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\bin\Debug\net10.0\Centralita-Telefonica-2.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.AssemblyInfoInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.AssemblyInfo.cs
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.sourcelink.json
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\refint\Centralita-Telefonica-2.dll
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.pdb
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\Centralita-Telefonica-2.genruntimeconfig.cache
+C:\Users\victo\OneDrive\Documents\Programs\clase\Programacion I\Centralita-Telefonica-2\obj\Debug\net10.0\ref\Centralita-Telefonica-2.dll
