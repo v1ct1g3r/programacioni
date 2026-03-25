@@ -1,0 +1,90 @@
+@using SistemaPedidos.Core.Models
+
+@model Pedido
+
+@{
+    ViewData["Title"] = $"Detalle del Pedido #{Model.Id}";
+}
+
+<div class="row">
+    <div class="col-md-10 offset-md-1">
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h3>Detalle del Pedido #@Model.Id</h3>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <p><strong>Fecha del Pedido:</strong> @Model.FechaPedido.ToString("dd/MM/yyyy HH:mm")</p>
+                        <p><strong>Estado:</strong>
+                            @if (Model.Estado == EstadoPedido.Procesado)
+                            {
+                                <span class="badge bg-success">✓ PROCESADO</span>
+                            }
+                            else if (Model.Estado == EstadoPedido.Pendiente)
+                            {
+                                <span class="badge bg-warning">⏳ PENDIENTE</span>
+                            }
+                            else if (Model.Estado == EstadoPedido.Cancelado)
+                            {
+                                <span class="badge bg-danger">✗ CANCELADO</span>
+                            }
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Método de Pago:</strong>
+                            @if (Model.TipoPago == "tarjeta")
+                            {
+                                <span class="badge bg-primary">💳 Tarjeta</span>
+                            }
+                            else if (Model.TipoPago == "efectivo")
+                            {
+                                <span class="badge bg-warning">💵 Efectivo</span>
+                            }
+                        </p>
+                        <p><strong>Total:</strong> <span class="text-success h5">$@Model.Total.ToString("F2")</span></p>
+                    </div>
+                </div>
+
+                <h5 class="mt-4">Productos en el Pedido</h5>
+                <table class="table table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            var subtotal = item.Cantidad * item.PrecioUnitario;
+                            <tr>
+                                <td>
+                                    @if (item.Producto != null)
+                                    {
+                                        <strong>@item.Producto.Nombre</strong>
+                                    }
+                                </td>
+                                <td>@item.Cantidad</td>
+                                <td>$@item.PrecioUnitario.ToString("F2")</td>
+                                <td><strong>$@subtotal.ToString("F2")</strong></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <div class="alert alert-info mt-3">
+                    <strong>Total de Items:</strong> @Model.Items.Count | 
+                    <strong>Cantidad Total:</strong> @Model.Items.Sum(i => i.Cantidad)
+                </div>
+
+                <div class="mt-4">
+                    <a href="/Pedidos" class="btn btn-primary">Volver a Pedidos</a>
+                    <a href="/Pedidos/Crear" class="btn btn-success">Crear Otro Pedido</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

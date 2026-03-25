@@ -1,0 +1,111 @@
+@using SistemaPedidos.Core.Models
+@using SistemaPedidos.Web.ViewModels
+
+@model CrearPedidoVM
+
+@{
+    ViewData["Title"] = "Crear Pedido";
+    var productos = ViewBag.Productos as List<Producto> ?? new();
+}
+
+<div class="row">
+    <div class="col-md-10 offset-md-1">
+        <h1>Crear Nuevo Pedido</h1>
+
+        <form method="post" class="mt-4">
+            <div class="card mb-3">
+                <div class="card-header bg-info text-white">
+                    <h5>Seleccionar Productos</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Seleccionar</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var producto in productos)
+                            {
+                                var tipo = producto is ProductoFisico ? "Físico" : "Digital";
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="ProductosSeleccionados" value="@producto.Id" 
+                                               class="form-check-input" id="producto_@producto.Id"
+                                               onchange="actualizarVisibilidad()" />
+                                    </td>
+                                    <td>
+                                        <label for="producto_@producto.Id">
+                                            <strong>@producto.Nombre</strong>
+                                            <span class="badge bg-secondary">@tipo</span>
+                                        </label>
+                                    </td>
+                                    <td>$@producto.Precio.ToString("F2")</td>
+                                    <td>
+                                        @if (producto.Stock > 0)
+                                        {
+                                            <span class="badge bg-success">@producto.Stock</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">Agotado</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <input type="number" name="Cantidades[@producto.Id]" min="0" max="@producto.Stock" 
+                                               class="form-control form-control-sm" style="width: 80px;" 
+                                               onchange="validarCantidad(this, @producto.Stock)" />
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header bg-success text-white">
+                    <h5>Método de Pago</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="TipoPago" id="tarjeta" value="tarjeta" checked />
+                        <label class="form-check-label" for="tarjeta">
+                            💳 Tarjeta de Crédito/Débito
+                        </label>
+                        <small class="d-block text-muted ms-4">Límite: $50,000</small>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="TipoPago" id="efectivo" value="efectivo" />
+                        <label class="form-check-label" for="efectivo">
+                            💵 Pago en Efectivo
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <button type="submit" class="btn btn-success btn-lg">Procesar Pedido</button>
+                <a href="/Pedidos" class="btn btn-secondary btn-lg">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validarCantidad(input, stock) {
+        const cantidad = parseInt(input.value) || 0;
+        if (cantidad > stock) {
+            input.value = stock;
+            alert(`Solo hay ${stock} unidades disponibles`);
+        }
+    }
+
+    function actualizarVisibilidad() {
+        // Validación básica
+    }
+</script>
