@@ -325,6 +325,6 @@ Todas las clases que implementan patrones incluyen comentarios XML (///) para:
 
 ---
 
-**Autor**: Sistema de Demostración de Patrones de Diseño  
-**Versión**: 1.5.0  
+**Autor**: Víctor Olmo  
+**Versión**: 1.5  
 **Última actualización**: 2026
