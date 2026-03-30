@@ -1,9 +1,5 @@
 namespace SistemaPedidos.Core.Pagos;
 
-/// <summary>
-/// Implementación de IPago para pagos en efectivo
-/// Estrategia de pago que siempre es exitosa
-/// </summary>
 public class PagoEfectivo : IPago
 {
     public bool Procesar(decimal monto, out string mensaje)

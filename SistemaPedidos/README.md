@@ -1,8 +1,8 @@
-# Sistema de Pedidos - Aplicación de Demostración
+# Sistema de Pedidos
 
-Una aplicación ASP.NET Core MVC completa que demuestra los patrones de diseño más importantes en C#: **Singleton**, **Factory**, **Strategy**, **Herencia** y **Encapsulamiento**.
+Aplicación ASP.NET Core MVC que demuestra la implementación de cinco patrones fundamentales de diseño: Singleton, Factory, Strategy, Herencia y Encapsulamiento.
 
-## 🎯 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **.NET 8** / **C# 12**
 - **ASP.NET Core MVC** con Razor Views
@@ -11,7 +11,7 @@ Una aplicación ASP.NET Core MVC completa que demuestra los patrones de diseño 
 - **SQL Server** (Base de datos)
 - **Bootstrap 5** (Estilos UI)
 
-## 📋 Patrones de Diseño Implementados
+## Patrones de Diseño
 
 ### 1. **SINGLETON** - `GestorSistema.cs`
 - Implementación thread-safe con `Lazy<T>`
@@ -40,7 +40,7 @@ Una aplicación ASP.NET Core MVC completa que demuestra los patrones de diseño 
 - Métodos de validación: `SetEstado()`, `AgregarItem()`, `CalcularTotal()`
 - Validaciones de transición de estado
 
-## 🗄️ Estructura de Base de Datos
+## Estructura de Base de Datos
 
 La aplicación crea automáticamente 4 tablas vía migraciones EF Core:
 
@@ -80,7 +80,7 @@ Pagos
 └── Estado
 ```
 
-## 🚀 Instrucciones de Instalación
+## Instalación
 
 ### **Paso 1: Configurar la Cadena de Conexión**
 
@@ -136,7 +136,7 @@ La aplicación estará disponible en:
 - **HTTP**: `http://localhost:5000`
 - **HTTPS**: `https://localhost:7000`
 
-## 📦 Estructura de Carpetas
+## Estructura de Carpetas
 
 ```
 SistemaPedidos/
@@ -201,7 +201,7 @@ SistemaPedidos/
         └── launchSettings.json
 ```
 
-## 🔄 Flujo Principal de la Aplicación
+## Flujo de la Aplicación
 
 1. **Visualizar Productos** → `/Productos`
    - Lista de todos los productos (físicos y digitales)
@@ -231,7 +231,7 @@ SistemaPedidos/
 7. **Detalle del Pedido** → `/Pedidos/Detalle/{id}`
    - Información completa con items
 
-## 💾 Datos Semilla (Seed Data)
+## Datos de Prueba
 
 La BD se inicializa automáticamente con 3 productos:
 
@@ -250,7 +250,7 @@ La BD se inicializa automáticamente con 3 productos:
    - Stock: 999 unidades
    - URL: https://download.microsoft.com/vspr
 
-## ✅ Inyección de Dependencias (Program.cs)
+## Inyección de Dependencias
 
 ```csharp
 // DbContext
@@ -268,7 +268,7 @@ builder.Services.AddScoped<IPedidoService, PedidoService>();
 // GestorSistema NO se registra (Singleton propio)
 ```
 
-## 🧪 Pruebas Manuales
+## Ejemplos de Uso
 
 ### Crear un Producto Físico
 ```
@@ -293,7 +293,7 @@ TipoPago: tarjeta
 - **Tarjeta**: Monto debe estar entre $0.01 y $49,999.99
 - **Efectivo**: Siempre acepta montos válidos > $0
 
-## 🐛 Manejo de Errores
+## Manejo de Errores
 
 La aplicación incluye:
 - Validaciones en modelos (Data Annotations)
@@ -302,21 +302,21 @@ La aplicación incluye:
 - Mensajes de error en `TempData`
 - Retroalimentación al usuario vía Bootstrap alerts
 
-## 📝 Comentarios XML
+## Documentación del Código
 
 Todas las clases que implementan patrones incluyen comentarios XML (///) para:
 - Documentación automática
 - IntelliSense en Visual Studio
 - Generación de documentación
 
-## 🔐 Notas de Seguridad
+## Consideraciones de Seguridad
 
 - Usar migraciones en entornos de producción
 - Encriptar connection strings
 - Validar entrada de usuario
 - Implementar autenticación/autorización según sea necesario
 
-## 📚 Referencias
+## Referencias
 
 - [Entity Framework Core Documentation](https://docs.microsoft.com/ef/core/)
 - [ASP.NET Core MVC](https://docs.microsoft.com/aspnet/core/mvc/)

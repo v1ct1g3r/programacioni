@@ -22,14 +22,16 @@ public class PedidoRepository : IPedidoRepository
     public async Task<List<Pedido>> ObtenerTodosAsync()
     {
         return await _context.Pedidos
-            .Include(p => p.Items)
+            .Include(p => p.ItemsNavigation)
+                .ThenInclude(i => i.Producto)
             .ToListAsync();
     }
 
     public async Task<Pedido?> ObtenerPorIdAsync(int id)
     {
         return await _context.Pedidos
-            .Include(p => p.Items)
+            .Include(p => p.ItemsNavigation)
+                .ThenInclude(i => i.Producto)
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 

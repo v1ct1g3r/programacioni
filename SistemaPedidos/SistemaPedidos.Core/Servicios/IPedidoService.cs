@@ -3,9 +3,6 @@ namespace SistemaPedidos.Core.Servicios;
 using Models;
 using Interfaces;
 
-/// <summary>
-/// Interfaz que define el contrato para el servicio de Pedidos
-/// </summary>
 public interface IPedidoService
 {
     Task<List<Pedido>> ObtenerTodosAsync();

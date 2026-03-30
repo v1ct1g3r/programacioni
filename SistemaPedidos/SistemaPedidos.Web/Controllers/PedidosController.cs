@@ -38,7 +38,11 @@ public class PedidosController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Crear(CrearPedidoVM vm)
     {
-        if (!ModelState.IsValid || vm.ProductosSeleccionados.Count == 0)
+        vm.ProductosSeleccionados ??= new List<int>();
+        vm.Cantidades ??= new Dictionary<int, int>();
+        vm.TipoPago ??= "tarjeta";
+
+        if (vm.ProductosSeleccionados.Count == 0)
         {
             TempData["Error"] = "Debe seleccionar al menos un producto";
             var productos = await _productoService.ObtenerTodosAsync();

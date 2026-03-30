@@ -6,85 +6,205 @@
     ViewData["Title"] = $"Detalle del Pedido #{Model.Id}";
 }
 
+<!-- HEADER -->
+<div class="page-header mb-4">
+    <h1 class="page-title">
+        <i class="fas fa-file-invoice me-2"></i>Detalle del Pedido #@Model.Id
+    </h1>
+</div>
+
 <div class="row">
-    <div class="col-md-10 offset-md-1">
-        <div class="card mb-4">
-            <div class="card-header bg-dark text-white">
-                <h3>Detalle del Pedido #@Model.Id</h3>
+    <!-- INFORMACIÓN PRINCIPAL -->
+    <div class="col-lg-8 mb-4">
+        <!-- ESTADO Y INFORMACIÓN -->
+        <div class="card shadow-lg rounded-lg mb-4">
+            <div class="card-header">
+                <i class="fas fa-info-circle me-2"></i>
+                <span>Información del Pedido</span>
             </div>
             <div class="card-body">
-                <div class="row mb-4">
+                <div class="row mb-3">
                     <div class="col-md-6">
-                        <p><strong>Fecha del Pedido:</strong> @Model.FechaPedido.ToString("dd/MM/yyyy HH:mm")</p>
-                        <p><strong>Estado:</strong>
-                            @if (Model.Estado == EstadoPedido.Procesado)
-                            {
-                                <span class="badge bg-success">✓ PROCESADO</span>
-                            }
-                            else if (Model.Estado == EstadoPedido.Pendiente)
-                            {
-                                <span class="badge bg-warning">⏳ PENDIENTE</span>
-                            }
-                            else if (Model.Estado == EstadoPedido.Cancelado)
-                            {
-                                <span class="badge bg-danger">✗ CANCELADO</span>
-                            }
-                        </p>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">ID del Pedido</label>
+                            <div class="h5 text-primary">#@Model.Id</div>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <p><strong>Método de Pago:</strong>
-                            @if (Model.TipoPago == "tarjeta")
-                            {
-                                <span class="badge bg-primary">💳 Tarjeta</span>
-                            }
-                            else if (Model.TipoPago == "efectivo")
-                            {
-                                <span class="badge bg-warning">💵 Efectivo</span>
-                            }
-                        </p>
-                        <p><strong>Total:</strong> <span class="text-success h5">$@Model.Total.ToString("F2")</span></p>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Estado</label>
+                            <div>
+                                @if (Model.Estado == EstadoPedido.Procesado)
+                                {
+                                    <span class="badge bg-success" style="font-size: 1rem; padding: 0.75rem 1.25rem;">
+                                        <i class="fas fa-check-circle me-1"></i>PROCESADO
+                                    </span>
+                                }
+                                else if (Model.Estado == EstadoPedido.Pendiente)
+                                {
+                                    <span class="badge bg-warning" style="font-size: 1rem; padding: 0.75rem 1.25rem;">
+                                        <i class="fas fa-hourglass-half me-1"></i>PENDIENTE
+                                    </span>
+                                }
+                                else if (Model.Estado == EstadoPedido.Cancelado)
+                                {
+                                    <span class="badge bg-danger" style="font-size: 1rem; padding: 0.75rem 1.25rem;">
+                                        <i class="fas fa-times-circle me-1"></i>CANCELADO
+                                    </span>
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <h5 class="mt-4">Productos en el Pedido</h5>
-                <table class="table table-striped">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Precio Unitario</th>
-                            <th>Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Items)
-                        {
-                            var subtotal = item.Cantidad * item.PrecioUnitario;
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">
+                                <i class="fas fa-calendar me-1"></i>Fecha del Pedido
+                            </label>
+                            <div class="h6">@Model.FechaPedido.ToString("dd/MM/yyyy HH:mm:ss")</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">
+                                <i class="fas fa-credit-card me-1"></i>Método de Pago
+                            </label>
+                            <div>
+                                @if (Model.TipoPago == "tarjeta")
+                                {
+                                    <span class="badge bg-primary">
+                                        <i class="fas fa-credit-card me-1"></i>Tarjeta
+                                    </span>
+                                }
+                                else if (Model.TipoPago == "efectivo")
+                                {
+                                    <span class="badge bg-warning">
+                                        <i class="fas fa-coins me-1"></i>Efectivo
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCTOS DEL PEDIDO -->
+        <div class="card shadow-lg rounded-lg">
+            <div class="card-header">
+                <i class="fas fa-cube me-2"></i>
+                <span>Productos en el Pedido</span>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
                             <tr>
-                                <td>
-                                    @if (item.Producto != null)
-                                    {
-                                        <strong>@item.Producto.Nombre</strong>
-                                    }
-                                </td>
-                                <td>@item.Cantidad</td>
-                                <td>$@item.PrecioUnitario.ToString("F2")</td>
-                                <td><strong>$@subtotal.ToString("F2")</strong></td>
+                                <th>Producto</th>
+                                <th style="width: 100px;">Cantidad</th>
+                                <th style="width: 120px;">Precio Unitario</th>
+                                <th style="width: 120px;">Subtotal</th>
                             </tr>
-                        }
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Items)
+                            {
+                                var subtotal = item.Cantidad * item.PrecioUnitario;
+                                <tr class="align-middle">
+                                    <td>
+                                        @if (item.Producto != null)
+                                        {
+                                            <strong>@item.Producto.Nombre</strong>
+                                            <br />
+                                            <small class="text-muted">@item.Producto.ObtenerDescripcion()</small>
+                                        }
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-secondary" style="font-size: 0.95rem;">
+                                            @item.Cantidad
+                                        </span>
+                                    </td>
+                                    <td class="text-heading fw-bold">$@item.PrecioUnitario.ToString("F2")</td>
+                                    <td class="text-heading fw-bold">$@subtotal.ToString("F2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="alert alert-info mt-3">
-                    <strong>Total de Items:</strong> @Model.Items.Count | 
-                    <strong>Cantidad Total:</strong> @Model.Items.Sum(i => i.Cantidad)
+    <!-- RESUMEN LATERAL -->
+    <div class="col-lg-4">
+        <!-- TARJETA DE RESUMEN -->
+        <div class="card shadow-lg rounded-lg position-sticky" style="top: 20px;">
+            <div class="card-header">
+                <i class="fas fa-receipt me-2"></i>
+                <span>Resumen del Pedido</span>
+            </div>
+            <div class="card-body">
+                <!-- Detalles -->
+                <div class="mb-3 pb-3 border-bottom">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Total de Productos:</span>
+                        <strong>@Model.Items.Count</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Total de Unidades:</span>
+                        <strong>@Model.Items.Sum(i => i.Cantidad)</strong>
+                    </div>
                 </div>
 
-                <div class="mt-4">
-                    <a href="/Pedidos" class="btn btn-primary">Volver a Pedidos</a>
-                    <a href="/Pedidos/Crear" class="btn btn-success">Crear Otro Pedido</a>
+                <!-- Total -->
+                <div class="alert alert-light border mb-3 p-3">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <span class="h6 mb-0">Total:</span>
+                        <span class="h4 text-primary mb-0">$@Model.Total.ToString("F2")</span>
+                    </div>
+                </div>
+
+                <!-- Estado Destacado -->
+                <div class="alert bg-primary text-white border-0 mb-3">
+                    <div class="text-center">
+                        @if (Model.Estado == EstadoPedido.Procesado)
+                        {
+                            <i class="fas fa-check-circle mb-2" style="font-size: 2.5rem;"></i>
+                            <p class="mb-0"><strong>Pedido Procesado</strong></p>
+                        }
+                        else if (Model.Estado == EstadoPedido.Pendiente)
+                        {
+                            <i class="fas fa-hourglass-half mb-2" style="font-size: 2.5rem;"></i>
+                            <p class="mb-0"><strong>En Proceso</strong></p>
+                        }
+                        else if (Model.Estado == EstadoPedido.Cancelado)
+                        {
+                            <i class="fas fa-times-circle mb-2" style="font-size: 2.5rem;"></i>
+                            <p class="mb-0"><strong>Cancelado</strong></p>
+                        }
+                    </div>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="d-grid gap-2">
+                    <a href="/Pedidos" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Volver a Pedidos
+                    </a>
+                    <a href="/Pedidos/Crear" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Crear Otro Pedido
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    @@media (max-width: 992px) {
+        .card {
+            position: static !important;
+        }
+    }
+</style>

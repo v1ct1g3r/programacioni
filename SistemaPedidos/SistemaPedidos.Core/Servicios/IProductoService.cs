@@ -2,9 +2,6 @@ namespace SistemaPedidos.Core.Servicios;
 
 using Models;
 
-/// <summary>
-/// Interfaz que define el contrato para el servicio de Productos
-/// </summary>
 public interface IProductoService
 {
     Task<List<Producto>> ObtenerTodosAsync();

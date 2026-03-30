@@ -6,57 +6,124 @@
     ViewData["Title"] = "Crear Producto";
 }
 
-<div class="row">
-    <div class="col-md-8 offset-md-2">
-        <h1>Crear Nuevo Producto</h1>
+<!-- HEADER -->
+<div class="page-header mb-4">
+    <h1 class="page-title">
+        <i class="fas fa-plus-circle me-2"></i>Crear Nuevo Producto
+    </h1>
+</div>
 
-        <form method="post" class="mt-4">
-            <div class="card">
+<div class="row justify-content-center">
+    <div class="col-lg-7">
+        <form method="post" id="formProducto">
+            <div class="card shadow-lg">
+                <!-- DATOS BÁSICOS -->
+                <div class="card-header">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <span>Información Básica</span>
+                </div>
                 <div class="card-body">
-                    <div class="mb-3">
-                        <label for="Nombre" class="form-label">Nombre del Producto</label>
-                        <input type="text" class="form-control" id="Nombre" name="Nombre" required />
+                    <div class="mb-4">
+                        <label for="Nombre" class="form-label">
+                            <i class="fas fa-tag me-2"></i>Nombre del Producto
+                        </label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" 
+                               placeholder="Ej: Laptop Dell XPS" required />
                     </div>
 
-                    <div class="mb-3">
-                        <label for="Precio" class="form-label">Precio ($)</label>
-                        <input type="number" class="form-control" id="Precio" name="Precio" step="0.01" required />
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="Stock" class="form-label">Stock</label>
-                        <input type="number" class="form-control" id="Stock" name="Stock" required />
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tipo de Producto</label>
-                        <div class="form-check mt-2">
-                            <input class="form-check-input" type="radio" name="Tipo" id="Fisico" value="Fisico" checked 
-                                   onchange="mostrarCampos()" />
-                            <label class="form-check-label" for="Fisico">Producto Físico</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <label for="Precio" class="form-label">
+                                    <i class="fas fa-dollar-sign me-2"></i>Precio
+                                </label>
+                                <input type="number" class="form-control" id="Precio" name="Precio" 
+                                       placeholder="0.00" step="0.01" required />
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Tipo" id="Digital" value="Digital" 
-                                   onchange="mostrarCampos()" />
-                            <label class="form-check-label" for="Digital">Producto Digital</label>
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <label for="Stock" class="form-label">
+                                    <i class="fas fa-boxes me-2"></i>Stock
+                                </label>
+                                <input type="number" class="form-control" id="Stock" name="Stock" 
+                                       placeholder="0" required />
+                            </div>
                         </div>
-                    </div>
-
-                    <div id="camposFisico" class="mb-3" style="display: block;">
-                        <label for="PesoKg" class="form-label">Peso en Kg</label>
-                        <input type="number" class="form-control" id="PesoKg" name="PesoKg" step="0.1" />
-                    </div>
-
-                    <div id="camposDigital" class="mb-3" style="display: none;">
-                        <label for="UrlDescarga" class="form-label">URL de Descarga</label>
-                        <input type="url" class="form-control" id="UrlDescarga" name="UrlDescarga" />
                     </div>
                 </div>
-            </div>
 
-            <div class="mt-3">
-                <button type="submit" class="btn btn-success">Crear Producto</button>
-                <a href="/Productos" class="btn btn-secondary">Cancelar</a>
+                <!-- TIPO DE PRODUCTO -->
+                <div class="card-header mt-2">
+                    <i class="fas fa-layer-group me-2"></i>
+                    <span>Tipo de Producto</span>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-check card-radio p-3 border-2 rounded-lg" style="border: 2px solid var(--border-color); cursor: pointer; background: var(--bg-surface);">
+                                <input class="form-check-input" type="radio" name="Tipo" id="Fisico" 
+                                       value="Fisico" checked onchange="mostrarCampos()" />
+                                <label class="form-check-label w-100" for="Fisico">
+                                    <i class="fas fa-box fa-2x mb-2"></i>
+                                    <div class="fw-bold">Producto Físico</div>
+                                    <small class="text-muted">Con peso y dimensiones</small>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check card-radio p-3 border-2 rounded-lg" style="border: 2px solid var(--border-color); cursor: pointer; background: var(--bg-surface);">
+                                <input class="form-check-input" type="radio" name="Tipo" id="Digital" 
+                                       value="Digital" onchange="mostrarCampos()" />
+                                <label class="form-check-label w-100" for="Digital">
+                                    <i class="fas fa-cloud-download-alt fa-2x mb-2"></i>
+                                    <div class="fw-bold">Producto Digital</div>
+                                    <small class="text-muted">Con enlace de descarga</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAMPOS ESPECÍFICOS -->
+                <div class="card-header mt-2">
+                    <i class="fas fa-cogs me-2"></i>
+                    <span>Detalles Específicos</span>
+                </div>
+                <div class="card-body">
+                    <!-- Campos Físico -->
+                    <div id="camposFisico" class="mb-4" style="display: block;">
+                        <label for="PesoKg" class="form-label">
+                            <i class="fas fa-weight me-2"></i>Peso en Kilogramos
+                        </label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="PesoKg" name="PesoKg" 
+                                   placeholder="Ej: 2.5" step="0.1" />
+                            <span class="input-group-text">kg</span>
+                        </div>
+                    </div>
+
+                    <!-- Campos Digital -->
+                    <div id="camposDigital" class="mb-4" style="display: none;">
+                        <label for="UrlDescarga" class="form-label">
+                            <i class="fas fa-link me-2"></i>URL de Descarga
+                        </label>
+                        <input type="url" class="form-control" id="UrlDescarga" name="UrlDescarga" 
+                               placeholder="https://ejemplo.com/archivo" />
+                    </div>
+                </div>
+
+                <!-- BOTONES -->
+                <div class="card-footer bg-light">
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="fas fa-check me-2"></i>Crear Producto
+                        </button>
+                        <a href="/Productos" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-times me-2"></i>Cancelar
+                        </a>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
@@ -68,4 +135,35 @@
         document.getElementById('camposFisico').style.display = tipo === 'Fisico' ? 'block' : 'none';
         document.getElementById('camposDigital').style.display = tipo === 'Digital' ? 'block' : 'none';
     }
+
+    // Efectos visuales para selección
+    document.querySelectorAll('input[name="Tipo"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            document.querySelectorAll('.card-radio').forEach(el => {
+                el.style.borderColor = 'var(--border-color)';
+                el.style.backgroundColor = 'var(--bg-surface)';
+            });
+            this.parentElement.style.borderColor = 'var(--color-primary)';
+            this.parentElement.style.backgroundColor = 'var(--color-primary-light)';
+        });
+    });
 </script>
+
+<style>
+    .card-radio {
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .card-radio:hover {
+        border-color: var(--color-primary) !important;
+        background-color: var(--color-primary-light) !important;
+    }
+
+    .input-group-text {
+        background: var(--bg-surface-hover);
+        color: var(--text-muted);
+        border: 1px solid var(--border-color);
+        border-left: none;
+    }
+</style>

@@ -1,9 +1,5 @@
 namespace SistemaPedidos.Core.Pagos;
 
-/// <summary>
-/// Implementación de IPago para pagos con tarjeta
-/// Estrategia de pago con validaciones específicas
-/// </summary>
 public class PagoTarjeta : IPago
 {
     public bool Procesar(decimal monto, out string mensaje)
