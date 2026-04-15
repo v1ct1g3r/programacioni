@@ -8,7 +8,7 @@ public class GestorSistema
     private int _contadorPedidos = 0;
 
     public string NombreSistema { get; } = "Sistema de Pedidos";
-    public string Version { get; } = "1.0.0";
+    public string Version { get; } = "1.5.0";
     public DateTime FechaInicio { get; } = DateTime.Now;
 
     public int ContadorPedidos => _contadorPedidos;
